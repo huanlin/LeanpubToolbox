@@ -1,0 +1,126 @@
+# Your snippets
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# You can create a new snippet in this file by typing "snip" and then hitting
+# tab.
+#
+# An example CoffeeScript snippet to expand log to console.log:
+#
+# '.source.coffee':
+#   'Console log':
+#     'prefix': 'log'
+#     'body': 'console.log $1'
+#
+# Each scope (e.g. '.source.coffee' above) can only be declared once.
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
+
+'.text.md': # This scope is defined in language-markdown package.
+  # Headings
+  'chapter':
+    'prefix': 'lp-chapter'
+    'body': '# ${1:title} {#${2:id}}'
+  'section, level 1':
+    'prefix': 'lp-section1'
+    'body': '## ${1:title} {#${2:id}}'
+  'section, level 2':
+    'prefix': 'lp-section2'
+    'body': '### ${1:title} {#${2:id}}'
+
+  # Image
+  'image':
+    'prefix': 'lp-img'
+    'body': '{width=100%}\n![${1:caption}](images/${2:filename})'
+  'image, floating':
+    'prefix': 'lp-imgfloat'
+    'body': '{width=100%, float=${1:left/right/inside/outside}}\n![${2:caption}](images/${3:filename})'
+
+  # Code block
+  'code':
+    'prefix': 'lp-code'
+    'body': '~~~~~~~~\n$1\n~~~~~~~~\n'
+  'code, line numbers ON/OFF':
+    'prefix': 'lp-codeln'
+    'body': '{linenos=${1:on/off}}\n~~~~~~~~\n$2\n~~~~~~~~\n'
+  'code, starting line number #':
+    'prefix': 'lp-codelnstart'
+    'body': '{line-numbers=on, starting-line-number=$1}\n~~~~~~~~\n$2\n~~~~~~~~\n'
+  'code, language ?':
+    'prefix': 'lp-codelang'
+    'body': '{lang="$1"}\n~~~~~~~~\n$2\n~~~~~~~~\n'
+  'code, language text':
+    'prefix': 'lp-codetext'
+    'body': '{linenos=off, lang="text"}\n~~~~~~~~\n$1\n~~~~~~~~\n'
+  'code, title':
+    'prefix': 'lp-codetitle'
+    'body': '{title="$1"}\n~~~~~~~~\n$2\n~~~~~~~~\n'
+  'code, delete':
+    'prefix': 'lp-codedel'
+    'body': '\nleanpub-start-delete\n$1\nleanpub-end-delete\n'
+  'code, insert':
+    'prefix': 'lp-codeins'
+    'body': '\nleanpub-start-insert\n$1\nleanpub-end-insert\n'
+
+  # Sidebars, blocks
+  'blockquote':
+    'prefix': 'lp-blockquote'
+    'body': '> #### ${1:title}\n>\n> $2'
+  'aside':
+    'prefix': 'lp-aside'
+    'body': 'A> #### ${1:title}\nA>\nA> $2'
+  'sidebar': # same as Aside
+    'prefix': 'lp-sidebar'
+    'body': 'A> #### ${1:title}\nA>\nA> $2'
+  'discussion':
+    'prefix': 'lp-discussion'
+    'body': 'D> #### ${1:title}\nD>\nD> $2'
+  'info':
+    'prefix' : 'lp-info'
+    'body': 'I> #### ${1:title}\nI>\nI> $2'
+  'error':
+    'prefix' : 'lp-error'
+    'body': 'E> #### ${1:title}\nE>\nE> $2'
+  'question':
+    'prefix' : 'lp-question'
+    'body': 'Q> #### ${1:title}\nQ>\nQ> $2'
+  'tip':
+    'prefix' : 'lp-tip'
+    'body': 'T> #### ${1:title}\nT>\nT> $2'
+  'warning':
+    'prefix' : 'lp-warning'
+    'body': 'W> #### ${1:title}\nW>\nW> $2'
+  'lp-exercise':
+    'prefix' : 'lp-exercise'
+    'body': 'X> #### ${1:title}\nX>\nX> $2'
+  'generic sidebar with icon':
+    'prefix': 'lp-sbicon'
+    'body': '{icon=${1:fontawesome icon name without "fa-"}}\nG> #### ${2:title}\nG> \nG> $3'
+  'sidebar with blub icon': # Maybe you'd like to use this for default TIP box.
+    'prefix': 'lp-sbicon-bulb'
+    'body': '{icon=lightbulb-o}\nG> #### $2\nG> \nG> $3'
+
+
+  # Miscellaneous
+  'space':
+    'prefix': 'lp-space'
+    'body': ' '  # actually a Unicode character ‘figure space’ (U+2007)
+  'space, no break':
+    'prefix': 'lp-spacenobreak'
+    'body': '&nbsp;'
+  'blank line':
+    'prefix': 'lp-blankline'
+    'body': '|  |'
+  'centered text':
+    'prefix': 'lp-centeredtext'
+    'body': 'C> $1'
+  'footnote':
+    'prefix': 'lp-footnote'
+    'body': '[^${1:id}]\n\n[^${1:id}] ${2:footnote text}\n'
+  'definition list':
+    'prefix': 'lp-deflist'
+    'body': '${1:name}\n: ${2:description}'
