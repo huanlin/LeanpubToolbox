@@ -16,9 +16,7 @@ I didn't bother to create an Atom package, so simply a copy-and-paste will do th
 
 Note that you may need to install [Markdown Grammer](https://atom.io/packages/language-markdown) package.
 
-## Useful Atom packages
-
-Here are some Atom packages you might be interested:
+Here are some more Atom packages you might be interested:
 
  * [Markdown Preview Plus](https://atom.io/packages/markdown-preview-plus)
  * [markdown-scroll-sync](https://atom.io/packages/markdown-scroll-sync)
