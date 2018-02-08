@@ -32,6 +32,14 @@
     'prefix': 'lp-section2'
     'body': '### ${1:title} {#${2:id}}'
 
+  # Crosslink ID
+  'id':
+    'prefix': 'lp-id'
+    'body': '{#${1:ID name, e.g. chapter-1}}'
+  'id link':
+    'prefix': 'lp-idlink'
+    'body': '[${1:text}](${2:id})'
+
   # Image
   'image':
     'prefix': 'lp-img'
@@ -103,7 +111,9 @@
   'sidebar with blub icon': # Maybe you'd like to use this for default TIP box.
     'prefix': 'lp-sbicon-bulb'
     'body': '{icon=lightbulb-o}\nG> #### $2\nG> \nG> $3'
-
+  'sidebar with code file icon':
+    'prefix': 'lp-sbicon-code'
+    'body': '{icon=file-code-o}\nG> 原始碼：${1:location of the source code.}'
 
   # Miscellaneous
   'space':
@@ -111,6 +121,9 @@
     'body': ' '  # actually a Unicode character ‘figure space’ (U+2007)
   'space, no break':
     'prefix': 'lp-spacenobreak'
+    'body': '&nbsp;'
+  'html space':
+    'prefix': 'lp-htmlsp'
     'body': '&nbsp;'
   'blank line':
     'prefix': 'lp-blankline'
@@ -124,3 +137,32 @@
   'definition list':
     'prefix': 'lp-deflist'
     'body': '${1:name}\n: ${2:description}'
+  'page break':
+    'prefix': 'lp-pagebreak'
+    'body': '{pagebreak}'
+
+  # For Chinese only
+  'em dash':
+    'prefix': 'emdash'
+    'body': '——' # U+2014 (UTF-8 Hex: 0xE2 0x80 0x94)
+  'em dash 2':
+    'prefix': 'chdash'
+    'body': '——' # U+2014 (UTF-8 Hex: 0xE2 0x80 0x94)
+  'ellipsis':
+    'prefix': 'dotdot'
+    'body': '……'
+  'quote':
+    'prefix': 'quote'
+    'body': '「$1」'
+  'double quote':
+    'prefix': 'dquote'
+    'body': '『$1』'
+  'parentheses':
+    'prefix': 'parenth'
+    'body': '（$1）'
+  'square brackets':
+    'prefix': 'sbracket'
+    'body': '［$1］'
+  'curly brackets':
+    'prefix': 'cbracket'
+    'body': '｛$1｝'
