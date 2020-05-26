@@ -1,0 +1,14 @@
+﻿{
+  "coupon": {
+    "coupon_code": "{{coupon_code}}",
+    "package_discounts_attributes": [
+      {
+        "package_slug": "book",
+        "discounted_price": {{discounted_price}}
+      }
+    ],
+    "start_date": "{{start_date}}",
+    "end_date": "{{end_date}}",
+    "max_uses": {{max_uses}}
+  }
+}
