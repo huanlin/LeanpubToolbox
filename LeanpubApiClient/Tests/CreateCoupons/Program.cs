@@ -14,13 +14,25 @@ namespace CreateCoupons
 
         static async Task Main(string[] args)
         {
-            if (args.Length < 1)
+            if (args.Length < 4)
             {
                 Console.WriteLine("Usage: ");
-                Console.WriteLine("CreateCoupons [bookID]");
+                Console.WriteLine("CreateCoupons [BookID] [Prefix] [Start Number] [Count]");
+                Console.WriteLine("");
+                Console.WriteLine("Example:");
+                Console.WriteLine("CreateCoupons dinet miniasp-202105 1 50");
                 return;
             }
             var bookId = args[0];
+            var prefix = args[1]; // example: dinet-miniasp-may
+            int startNumber = Convert.ToInt32(args[2]);
+            int count = Convert.ToInt32(args[3]);
+            
+            if (count < 1)
+            {
+                Console.WriteLine("Count should be larger than 0.");
+            }
+
 
             if (!File.Exists(".apikey"))
             {
@@ -32,7 +44,7 @@ namespace CreateCoupons
 
             apiClient = new LeanpubApiClient(apiKey);
 
-            await BatchCreateCoupons(bookId, "dinet-miniasp-jun", 11, 40);
+            await BatchCreateCoupons(bookId, prefix, startNumber, count);
         }
 
         public static async Task CreateCoupon(string bookId)
