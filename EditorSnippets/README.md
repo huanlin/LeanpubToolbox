@@ -1,16 +1,11 @@
 # Snippets-for-Leanpub
+
 Code snippets for writing Leanpub e-books.
-
-Currently only one snippet file included for Atom editor, which is inspired by Maksim Surguy's [leanpub-snippets](https://github.com/msurguy/leanpub-snippets).
-
-[Click this link to watch the demo](https://github.com/huanlin/Snippets-for-Leanpub/blob/master/Atom/snippets-demo.gif).
-
-If you'd like to contribute, kindly improve existing snippets, or provide your own code snippets for other editors (e.g. Visual Studio Code). Much appreciated.
 
 ## Installation for Visual Studio Code
 
 1. Click File | Preferences | Configure User Snippets, then select Markdown or markdown.json from the dropdown list.
-2. Now you should see markdown.json in current editor window. Copy all text from vscode/markdown.json and paste to the editor window, then save the file.
+2. Now you should see markdown.json in current editor window. Copy all text from [vscode/markdown.json](vscode/markdown.json) and paste to the editor window, then save the file.
 
 Since Quick Suggestions feature for Markdown is disabled by default, so we need to enable it. Press Ctrl+Shift+P, then select "Preferences: Open User Settings (JSON)" to open settings.json file. Paste the following text:
 
@@ -37,6 +32,8 @@ I didn't bother to create an Atom package, so simply a copy-and-paste will do th
 
 1. Open your snippets file from Atom editor. You can do this by clicking "File > Snippets..." from main menu.
 2. Copy text from Atom/snippets.cson and paste it to your snippets.cson, save it. Done.
+
+![](Atom/snippets-demo.gif)
 
 Note that you may need to install [Markdown Grammer](https://atom.io/packages/language-markdown) package.
 
