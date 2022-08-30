@@ -7,6 +7,26 @@ Currently only one snippet file included for Atom editor, which is inspired by M
 
 If you'd like to contribute, kindly improve existing snippets, or provide your own code snippets for other editors (e.g. Visual Studio Code). Much appreciated.
 
+## Installation for Visual Studio Code
+
+1. Click File | Preferences | Configure User Snippets, then select Markdown or markdown.json from the dropdown list.
+2. Now you should see markdown.json in current editor window. Copy all text from vscode/markdown.json and paste to the editor window, then save the file.
+
+Since Quick Suggestions feature for Markdown is disabled by default, so we need to enable it. Press Ctrl+Shift+P, then select "Preferences: Open User Settings (JSON)" to open settings.json file. Paste the following text:
+
+```
+{
+    // Configure settings to be overridden for the markdown language.
+    "[markdown]":  {
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": true,
+            "strings": true
+        }
+    }
+}
+```
+
 ## Installation for Atom
 
 I didn't bother to create an Atom package, so simply a copy-and-paste will do the trick:

@@ -1,0 +1,170 @@
+{
+    "lp-heading": {
+        "prefix": "lp-heading",
+        "body": [
+            "# ${1:title} {#${2:id}}"
+        ],
+        "description": "insert a heading with ID"
+    },
+    "lp-link-id": {
+        "prefix": "lp-link-id",
+        "body": [
+            "{#${1:ID name, e.g. chapter-1}}"
+        ],
+        "description":"insert a crosslink ID"
+    },
+    "lp-image": {
+        "prefix": "lp-img",
+        "body": [
+            "![$0](images/$1)"
+        ],
+        "description": "insert image with caption"
+    },
+    "lp-code": {
+        "prefix": "lp-code",
+        "body": [
+            "~~~~~~~~\n$1\n~~~~~~~~\n"
+        ],
+        "description": "insert a code block"
+    },
+    "lp-code-linenum": {
+        "prefix": "lp-code-ln",
+        "body": [
+            "{linenos=${1:on/off}}\n~~~~~~~~\n$2\n~~~~~~~~\n"
+        ],
+        "description": "insert a code block with line number on/off"
+    },
+    "lp-code-text": {
+        "prefix": "lp-code-text",
+        "body": [
+            "{linenos=off, lang=text}\n~~~~~~~~\n$1\n~~~~~~~~\n"
+        ],
+        "description": "insert a code block with lang=text"
+    },
+    "lp-code-title": {
+        "prefix": "lp-code-title",
+        "body": [
+            "{title='Listing $0'}",
+            "~~~~~~~~\n$1\n~~~~~~~~"
+        ],
+        "description": "insert a code block"
+    },
+    "lp-code-del": {
+        "prefix": "lp-code-del",
+        "body": [
+            "\nleanpub-start-delete\n$1\nleanpub-end-delete\n"
+        ],
+        "description": "insert a code block with delete marks"
+    },
+    "lp-code-insert": {
+        "prefix": "lp-code-ins",
+        "body": [
+            "\nleanpub-start-insert\n$1\nleanpub-end-insert\n"
+        ],
+        "description": "insert a code block with insert marks"
+    },
+    "lp-quote": {
+        "prefix": "lp-quote",
+        "body": [
+            "> ${1}\n"
+        ],
+        "description": "insert a blockquote"
+    },
+    "lp-aside": {
+        "prefix": "lp-aside",
+        "body": [
+            "A> #### ${1:title}",
+            "A>",
+            "A> $2"
+        ],
+        "description": "insert aside"
+    },
+    "lp-info": {
+        "prefix": "lp-info",
+        "body": [
+            "I> #### ${1:title}",
+            "I>",
+            "I> $2"
+        ],
+        "description": "insert info block"
+    },
+    "lp-error": {
+        "prefix": "lp-error",
+        "body": [
+            "E> #### ${1:title}",
+            "E>",
+            "E> $2"
+        ],
+        "description": "insert error block"
+    },
+    "lp-question": {
+        "prefix": "lp-question",
+        "body": [
+            "Q> #### ${1:title}",
+            "Q>",
+            "Q> $2"
+        ],
+        "description": "insert question block"
+    },
+    "lp-tip": {
+        "prefix": "lp-tip",
+        "body": [
+            "T> #### ${1:title}",
+            "T>",
+            "T> $2"
+        ],
+        "description": "insert tip block"
+    },
+    "lp-warning": {
+        "prefix": "lp-warning",
+        "body": [
+            "W> #### ${1:title}",
+            "W>",
+            "W> $2"
+        ],
+        "description": "insert warning block"
+    },
+    "lp-discussion": {
+        "prefix": "lp-discussion",
+        "body": [
+            "D> #### ${1:title}",
+            "D>",
+            "D> $2"
+        ],
+        "description": "insert discussion block"
+    },
+    "lp-exercise": {
+        "prefix": "lp-exercise",
+        "body": [
+            "X> #### ${1:title}",
+            "X>",
+            "X> $2"
+        ],
+        "description": "insert exercise block"
+    },
+    "lp-icon-bulb": {
+        "prefix": "lp-icon-bulb",
+        "body": [
+            "{icon=lightbulb-o}",
+            "G> #### ${1:title}",
+            "G>",
+            "G> $2"
+        ],
+        "description": "insert a block with a bulb icon"
+    },
+    "lp-icon-code": {
+        "prefix": "lp-icon-code",
+        "body": [
+            "{icon=file-code-o}",
+            "G> Code location: $2"
+        ],
+        "description": "insert a block for describing code location"
+    },
+    "lp-pagebreak": {
+        "prefix": "lp-pagebreak",
+        "body": [
+            "{pagebreak}"
+        ],
+        "description": "insert a pagebreak"
+    }
+}
