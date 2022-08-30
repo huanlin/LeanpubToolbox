@@ -27,6 +27,10 @@ Since Quick Suggestions feature for Markdown is disabled by default, so we need 
 }
 ```
 
+Now when you type "lp" in a markdown file, you should see Quick Suggestion list shown as below.
+
+![](vscode/vscode-demo.png)
+
 ## Installation for Atom
 
 I didn't bother to create an Atom package, so simply a copy-and-paste will do the trick:
