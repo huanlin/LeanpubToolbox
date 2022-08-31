@@ -9,13 +9,14 @@
     "lp-link-id": {
         "prefix": "lp-link-id",
         "body": [
-            "{#${1:ID name, e.g. chapter-1}}"
+            "[${1:text}](${2:id})"
         ],
         "description":"insert a crosslink ID"
     },
     "lp-image": {
         "prefix": "lp-img",
         "body": [
+            "{width=100%}",
             "![$0](images/$1)"
         ],
         "description": "insert image with caption"
